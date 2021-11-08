@@ -16,12 +16,12 @@ __General preparation steps:__
 1. Use Visual Studio 2019 (tested with 16.11.5)
 2. Create a new project using the Windows Class Library (.NET Framework) template
 3. Add Analyzer package ``Microsoft.CodeAnalysis.FxCopAnalyzers, 2.9.12`` ([nuget.org](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.12?_src=template))
-4. Create ruleset file configured with Rule ``CA1062`` set to ``Warning`` (see [default.ruleset](src\default.ruleset)). The configuration of all the other rules from the same NuGet Analyzer package does not matter for the repro.
-5. Add code which violates against the ``CA1062`` rule (see [Violation.cs](src\VisualStudioIntellisenseErrors\FxCopRules\CA1062\Violation.cs)).
+4. Create ruleset file configured with Rule ``CA1062`` set to ``Warning`` (see [default.ruleset](src/default.ruleset)). The configuration of all the other rules from the same NuGet Analyzer package does not matter for the repro.
+5. Add code which violates against the ``CA1062`` rule (see [Violation.cs](src/VisualStudioIntellisenseErrors/FxCopRules/CA1062/Violation.cs)).
 
 __Special preparation steps required to reveal the problem:__
 
-1. Create [build\default.props](build\default.props) containing the following properties:
+1. Create [build\default.props](build/default.props) containing the following properties:
 
 ```xml
   <PropertyGroup>
@@ -30,7 +30,7 @@ __Special preparation steps required to reveal the problem:__
   </PropertyGroup>
 ```
 
-2. Add the following properties to the [project file](src\VisualStudioIntellisenseErrors\VisualStudioIntellisenseErrors.csproj):
+2. Add the following properties to the [project file](src/VisualStudioIntellisenseErrors/VisualStudioIntellisenseErrors.csproj):
 
 ```xml
   <Import Project="..\..\build\default.props" />
