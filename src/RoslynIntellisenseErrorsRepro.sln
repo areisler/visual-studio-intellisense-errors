@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{54569496-7D9F-4622-B338-96F78A498FAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solution items", "solution items", "{C3C1D252-7E5B-4509-847C-0D95821C5FDF}"
+	ProjectSection(SolutionItems) = preProject
+		..\.gitignore = ..\.gitignore
+		default.ruleset = default.ruleset
+		Directory.Build.props = Directory.Build.props
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualStudioIntellisenseErrors", "VisualStudioIntellisenseErrors\VisualStudioIntellisenseErrors.csproj", "{CF353B3A-9137-4F59-996E-B2F564F907D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF353B3A-9137-4F59-996E-B2F564F907D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF353B3A-9137-4F59-996E-B2F564F907D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF353B3A-9137-4F59-996E-B2F564F907D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF353B3A-9137-4F59-996E-B2F564F907D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CF353B3A-9137-4F59-996E-B2F564F907D0} = {54569496-7D9F-4622-B338-96F78A498FAA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2748C2AE-5175-49C0-B581-780D1BE6E7DA}
+	EndGlobalSection
+EndGlobal

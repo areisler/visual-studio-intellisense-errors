@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <_OutputPath>$(MSBuildThisFileDirectory)..\out\$(MSBuildProjectName)\</_OutputPath>
+    <BaseIntermediateOutputPath>$(_OutputPath)obj</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(_OutputPath)bin</BaseOutputPath>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <WarningsNotAsErrors>612,618</WarningsNotAsErrors>
+  </PropertyGroup>
+  
+</Project>
