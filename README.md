@@ -54,11 +54,9 @@ Start Visual Studio and execute the following steps:
 
 Once the IntelliSense has completed its initialization the ErrorList will show one detected issue for the rule CA1062 as ``Error`` 
 
-despite the ruleset configuration sets its severity to ``Warning``:
+despite the ruleset configuration sets its severity to ``Warning`` and the project property ``TreatWarningsAsErrors`` configured as ``<TreatWarningsAsErrors>false</TreatWarningsAsErrors>``:
 
 ![image.png](./docs/images/visual-studio-error-list-with-intellisense-errors.png)
-
-and the project property ``TreatWarningsAsErrors`` configured as ``<TreatWarningsAsErrors>false</TreatWarningsAsErrors>``
 
 ## Used Visual Studio version
 
