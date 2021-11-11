@@ -1,11 +1,9 @@
 # visual-studio-intellisense-errors
-Contains a repro of a Visual Studio IntelliSense problem showing build warnings as errors
+Contains a repro for a problem where Roslyn analyzer warnings are wrongly shown as errors in Visual Studio IntelliSense design-time-build. 
 
 ## Problem summary
 
 This repo contains a code sample showing a problem in Visual Studio IntelliSense behavior. The sample contains a class library, which builds just fine when running through the compiler, but Visual Studio displays IntelliSense errors in the Error Windows and in the code with underlined squiggles.
-
-This behaviors starts showing up only after the imported msbuild properties file has got the ``<WarningsNotAsErrors>612,618</WarningsNotAsErrors>`` property with some arbitrary values added.
 
 ## Detailed repro steps
 
@@ -13,7 +11,7 @@ This behaviors starts showing up only after the imported msbuild properties file
 
 __General preparation steps:__
 
-1. Use Visual Studio 2019 (tested with 16.11.5)
+1. Use Visual Studio 2017/2019 (for version details see separate section below)
 2. Create a new project using the Windows Class Library (.NET Framework) template
 3. Add Analyzer package ``Microsoft.CodeAnalysis.FxCopAnalyzers, 2.9.12`` ([nuget.org](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.9.12?_src=template))
 4. Create a new ruleset file configured with e.g. rule ``CA1062`` set to ``Warning`` (see [default.ruleset](src/default.ruleset)). The configuration of all the other rules from the same NuGet Analyzer package does not matter for the purpose of this repro.
@@ -44,16 +42,23 @@ __Special preparation steps required to reveal the problem:__
 
 Start Visual Studio and execute the following steps:
 
-1. Open the ``src\RoslynIntellisenseErrorsRepro.sln`` solution
-2. Open the ``\src\VisualStudioIntellisenseErrors\FxCopRules\CA1062\Violation.cs`` file
-3. Open the ``Visual Studio ErrorList``
-4. Change the issue filter to show ``Build + IntelliSense``
+1. Clone this repo
+3. Open the ``src\RoslynIntellisenseErrorsRepro.sln`` solution
+4. Build the solution
+5. Reopen the solution
+6. Open the ``\src\VisualStudioIntellisenseErrors\FxCopRules\CA1062\Violation.cs`` file
+7. Open the ``Visual Studio ErrorList``
+8. Change the issue filter to show ``Build + IntelliSense``
 
 ### Observe the problem
 
-The ErrorList shows one detected issue for the rule CA1062 as ``Error`` despite the ruleset configuration sets its severity to ``Warning``:
+Once the IntelliSense has completed its initialization the ErrorList will show one detected issue for the rule CA1062 as ``Error`` 
+
+despite the ruleset configuration sets its severity to ``Warning``:
 
 ![image.png](./docs/images/visual-studio-error-list-with-intellisense-errors.png)
+
+and the project property ``TreatWarningsAsErrors`` configured as ``<TreatWarningsAsErrors>false</TreatWarningsAsErrors>``
 
 ## Used Visual Studio version
 
