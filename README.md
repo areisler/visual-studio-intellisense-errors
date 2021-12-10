@@ -65,8 +65,8 @@ __Special preparation steps required to reveal the problem:__
 ```text
 
 Microsoft Visual Studio Enterprise 2019
-Version 16.11.6
-VisualStudio.16.Release/16.11.6+31829.152
+Version 16.11.7
+VisualStudio.16.Release/16.11.7+31911.196
 Microsoft .NET Framework
 Version 4.8.03752
 
