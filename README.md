@@ -46,7 +46,6 @@ __Special preparation steps required to reveal the problem:__
 ```xml
   <PropertyGroup>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsNotAsErrors>612,618</WarningsNotAsErrors>
   </PropertyGroup>
 ```
 
