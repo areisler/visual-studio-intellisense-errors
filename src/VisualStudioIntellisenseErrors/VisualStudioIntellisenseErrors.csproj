@@ -5,7 +5,6 @@
   <!-- START - custom configuration related to our code analysis -->
   <Import Project="..\..\build\default.props" />
   <PropertyGroup>
-    <CodeAnalysisRuleSet>..\default.ruleset</CodeAnalysisRuleSet>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <!-- END - custom configuration related to our code analysis -->
@@ -21,7 +20,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>  
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

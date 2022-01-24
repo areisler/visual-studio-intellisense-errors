@@ -1,0 +1,9 @@
+﻿# NOTE: Requires **VS2019 16.3** or later
+
+# Default ruleset
+# Description: default.ruleset
+
+# Code files
+[*.{cs,vb}]
+
+dotnet_diagnostic.CA1062.severity = warning

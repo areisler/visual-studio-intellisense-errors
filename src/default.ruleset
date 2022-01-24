@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Default ruleset" ToolsVersion="16.0">
-  <RuleHintPaths>
-    <Path>..\Rules</Path>
-  </RuleHintPaths>
-  <Rules AnalyzerId="Microsoft.CodeAnalysis.NetAnalyzers" RuleNamespace="Microsoft.CodeAnalysis.NetAnalyzers">
-    <Rule Id="CA1062" Action="Warning" />
-  </Rules>
-</RuleSet>
