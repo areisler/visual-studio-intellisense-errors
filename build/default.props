@@ -7,7 +7,7 @@
   
   <PropertyGroup>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <WarningsNotAsErrors>612,618</WarningsNotAsErrors>
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);612,618</WarningsNotAsErrors>
   </PropertyGroup>
   
 </Project>
