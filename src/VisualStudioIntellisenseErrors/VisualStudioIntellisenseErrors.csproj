@@ -6,7 +6,7 @@
   <Import Project="..\..\build\default.props" />
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\default.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisTreatWarningsAsErrors>false</CodeAnalysisTreatWarningsAsErrors>
   </PropertyGroup>
   <!-- END - custom configuration related to our code analysis -->
   <PropertyGroup>
